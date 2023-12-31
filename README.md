@@ -13,6 +13,21 @@ The project consists of the following components:
 
 - **Concrete Strategies**: Classes that implement the Strategy interface. They provide specific implementations of the algorithm.
 
+
+## Observer Pattern in java
+
+### Overview
+
+The Observer Pattern is a behavioral design pattern where an object, known as the subject, maintains a list of its dependents, known as observers, that are notified of any changes in the subject's state.
+
+#### Components
+
+- **Subject**: The class that maintains a list of observers and notifies them of state changes.
+- **Observer**: The interface or abstract class that defines the method(s) to be called when the subject's state changes.
+- **ConcreteSubject**: The class that extends or implements the Subject, and its state changes trigger notifications to observers.
+- **ConcreteObserver**: The class that implements the Observer interface and is notified when the subject's state changes.
+
+
 ## Usage
 
 1. Clone the repository:
