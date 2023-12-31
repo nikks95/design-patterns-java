@@ -1,5 +1,6 @@
 SRC_DIR := com/example
 OUT_DIR := classes
+MAIN_CLASS = com.example.Main
 
 # Find all Java source files recursively
 JAVA_FILES := $(shell find $(SRC_DIR) -name "*.java")
@@ -9,7 +10,10 @@ $(shell mkdir -p $(OUT_DIR))
 
 # Define the target to compile Java files
 compile: $(JAVA_FILES)
-	javac -d $(OUT_DIR) $^
+	@javac -d $(OUT_DIR) $^
+
+run: compile
+	@cd $(OUT_DIR) && java $(MAIN_CLASS)
 
 # Define a clean target to remove the compiled files
 clean:
